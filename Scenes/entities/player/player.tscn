@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dfvmvlk8jcejo"]
+
+[ext_resource type="Script" uid="uid://flherwwcdx5e" path="res://Scripts/player.gd" id="1_qco85"]
+[ext_resource type="PackedScene" uid="uid://dghnl51332ieg" path="res://Scenes/entities/player/camera_controller.tscn" id="2_yl34j"]
+[ext_resource type="PackedScene" uid="uid://bno036r75aj4w" path="res://Scenes/entities/player/player_skin.tscn" id="3_6b3hu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_knhlu"]
+
+[node name="Player" type="CharacterBody3D" unique_id=562562145]
+script = ExtResource("1_qco85")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1378583725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_knhlu")
+
+[node name="CameraController" parent="." unique_id=340157297 instance=ExtResource("2_yl34j")]
+transform = Transform3D(1, 0, 0, 0, 0.9063077, 0.42261824, 0, -0.42261824, 0.9063077, 0, 1.4, 0)
+min_limit_x = -0.8
+max_limit_x = -0.2
+
+[node name="PlayerSkin" parent="." unique_id=1704768163 instance=ExtResource("3_6b3hu")]
+transform = Transform3D(1.0603366, 0, 0, 0, 1.0603366, 0, 0, 0, 1.0603366, 0, 0, 0)

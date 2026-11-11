@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dghnl51332ieg"]
+
+[ext_resource type="Script" uid="uid://ctxw1kkod7e3n" path="res://Scripts/camera_controller.gd" id="1_4ah77"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_knhlu"]
+
+[node name="CameraController" type="SpringArm3D" unique_id=1776606928]
+shape = SubResource("SphereShape3D_knhlu")
+spring_length = 6.0
+script = ExtResource("1_4ah77")
+min_limit_x = 0.8
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=785171271]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1.0000001, 0, 0, 0)
+current = true
